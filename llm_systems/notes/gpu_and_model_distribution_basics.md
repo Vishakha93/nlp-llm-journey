@@ -1,5 +1,5 @@
 # GPU Memory, Model Parameters & How Large Models Run Across Multiple GPUs
-*A foundational, intuitive overview based on today's discussion.*
+*A foundational, intuitive overview based on interactive conversation with chatGPT.*
 
 ---
 
