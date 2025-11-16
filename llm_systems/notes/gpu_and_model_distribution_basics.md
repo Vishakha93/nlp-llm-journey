@@ -193,7 +193,7 @@ Multiple fine-tuned variants multiply cost linearly.
 Below is a diagram showing how an inference request flows across CPU → multi-GPU pipeline → API/UI.
 
 <p align="center">
-  <img src="../images/multi_gpu_inference.png" alt="Multi-GPU Inference Server Architecture" width="700"/>
+  <img src="../multi_gpu_inference.png" alt="Multi-GPU Inference Server Architecture" width="700"/>
 </p>
 
 **Explanation:**
