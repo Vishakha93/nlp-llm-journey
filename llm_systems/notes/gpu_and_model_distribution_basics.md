@@ -186,3 +186,30 @@ Each replica requires:
 
 Multiple fine-tuned variants multiply cost linearly.
 
+---
+
+## 9. Multi-GPU Inference Server (High-Level Architecture)
+
+Below is a diagram showing how an inference request flows across CPU → multi-GPU pipeline → API/UI.
+
+<p align="center">
+  <img src="../images/multi_gpu_inference.png" alt="Multi-GPU Inference Server Architecture" width="700"/>
+</p>
+
+**Explanation:**
+
+- **CPU**
+  - Handles tokenization and request routing.
+  - Prepares input tensors before sending to GPU pipeline.
+
+- **GPU Pipeline (Pipeline Parallelism)**
+  - Model layers split across GPUs (GPU0 → GPU1 → GPU2 → GPU3).
+  - Each GPU processes its segment of layers and forwards activations.
+
+- **UI/API**
+  - Exposes REST endpoints.
+  - Streams generated tokens back to the user.
+
+---
+
+
